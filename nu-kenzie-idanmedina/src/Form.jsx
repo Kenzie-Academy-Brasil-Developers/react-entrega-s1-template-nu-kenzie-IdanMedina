@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const Form = (insertTransaction) => {
+const Form = ({insertTransaction}) => {
   const [data, setData] = useState({
     description: "",
     type: "entrada",
@@ -10,6 +10,7 @@ const Form = (insertTransaction) => {
 
   function submit(e) {
     e.preventDefault();
+    console.log(data)
     insertTransaction(data);
     setData({
       description: "",

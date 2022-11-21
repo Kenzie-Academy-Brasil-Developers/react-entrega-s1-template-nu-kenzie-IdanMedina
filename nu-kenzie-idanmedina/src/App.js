@@ -1,8 +1,8 @@
-import React from 'react';
-import Login from './pages/Login';
-import Home from './pages/Home';
-import { list } from './data/database';
-import {useState} from 'react';
+import React from "react";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
+import {list} from "./data/database"
+import {useState} from "react";
 
 /* 
 Filtro - faça um filtro para mostrar somente entradas ou saídas,
@@ -21,10 +21,10 @@ Filtro - faça um filtro para mostrar somente entradas ou saídas,
 function App() {
  
   const [start, setStart] = useState(false);
-  const [listTransactions, setListTransactions] = useState(list);
+  const [listTransactions, setListTransactions] = useState([]);
   const [filterType, setFilterType] = useState("todos");
 
-  const filteredList = list.filter((transaction) => filterType === "todos"? true : transaction.type === filterType)
+  const filteredList = listTransactions.filter((transaction) => filterType === "todos"? true : transaction.type === filterType)
 
   function insertTransaction(data){
     setListTransactions([...listTransactions, data])
