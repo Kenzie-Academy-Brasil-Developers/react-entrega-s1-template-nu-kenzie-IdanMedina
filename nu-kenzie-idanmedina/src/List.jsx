@@ -3,19 +3,21 @@ import Card from "./Card";
 
 const List = ({list, deleteTransaction, setFilterType}) => {
   return (
-    <div>
+    <div className="ul-container">
+      <div id="resumen">
       <h3>Resumo financeiro</h3>
-      <div>
+      <div id="box-btn">
       <button onClick ={() => setFilterType("todos")}>Todos</button>
       <button onClick ={() => setFilterType("entrada")}>Entradas</button>
       <button onClick ={() => setFilterType("saída")}>Saídas</button>
+      </div>
       </div>
     <ul>
       {list.map ((transaction, index) => (
         <Card key={index} transaction={transaction} deleteTransaction={deleteTransaction}/>
       ))}
       </ul>
-      </div>
+    </div>
       /* Agora, dentro do componente List,
      você precisa fazer um map no state listTransactions.
       Para cada interação da lista você criará um componente Card.

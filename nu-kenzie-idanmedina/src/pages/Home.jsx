@@ -9,7 +9,7 @@ const Home = ({list, insertTransaction, deleteTransaction, setFilterType, setSta
     <div>
       <Header setStart={setStart} />
       <Form insertTransaction = {insertTransaction} />
-      {<TotalMoney list={list} sumTransactions={sumTransactions}/>}
+      <TotalMoney list={list} sumTransactions={sumTransactions}/>
       <List list={list} deleteTransaction={deleteTransaction} setFilterType={setFilterType} />
     </div>
   )

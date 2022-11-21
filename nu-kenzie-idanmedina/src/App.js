@@ -26,12 +26,13 @@ function App() {
 
   const filteredList = list.filter((transaction) => filterType === "todos"? true : transaction.type === filterType)
 
-  function insertTransaction(list){
-    setListTransactions([...listTransactions, list])
+  function insertTransaction(data){
+    setListTransactions([...listTransactions, data])
   };
 
   function deleteTransaction(delTransDescription){
     const filterList = listTransactions.filter((transaction) => transaction.description !== delTransDescription);
+    console.log(filterList)
     setListTransactions(filterList)
   };
 

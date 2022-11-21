@@ -1,12 +1,14 @@
 import React from "react";
 
-const Header = ({setStart}) => {
+const Header = ({ setStart }) => {
   return (
-    <header>
-    <img src="./Nu Kenzie.png" alt="Logo"/>
-    <button onClick={() => setStart(false)}>Início</button>
-        </header>
-  )
-}
+    <header className="header">
+      <div className="header-container">
+        <img src="./Nu Kenzie.png" alt="Logo" />
+        <button onClick={() => setStart(false)}>Início</button>
+      </div>
+    </header>
+  );
+};
 
-export default Header
+export default Header;
