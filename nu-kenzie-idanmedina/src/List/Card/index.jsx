@@ -1,8 +1,9 @@
 import React from "react";
+import { FaTrash } from "react-icons/fa";
 
 const Card = ({ transaction, deleteTransaction }) => {
   return (
-    <li>
+    <li className="card">
       <div>
         <div id="flap"></div>
         <div className="card-info">
@@ -12,11 +13,8 @@ const Card = ({ transaction, deleteTransaction }) => {
       </div>
       <div className="card-value">
           <p>R$ {transaction.value}</p>
-        <span onClick={() => deleteTransaction(transaction.description)}>
-          <img
-            onClick={() => deleteTransaction(transaction.description)}
-            src="./trash.png"
-          />
+        <span onClick={() => deleteTransaction(transaction.id)}>
+          <FaTrash className="trash" onClick={() => deleteTransaction(transaction.id)}/>
         </span>
       </div>
     </li>

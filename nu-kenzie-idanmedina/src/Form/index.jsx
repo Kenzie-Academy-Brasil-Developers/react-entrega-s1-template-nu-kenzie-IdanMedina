@@ -1,27 +1,30 @@
 import React from "react";
 import { useState } from "react";
+import styles from "./styles.module.css"
 
-const Form = ({insertTransaction}) => {
+const Form = ({ insertTransaction }) => {
   const [data, setData] = useState({
     description: "",
     type: "entrada",
-    value: 0,
+    value: "",
+    id: Math.random()
   });
 
   function submit(e) {
     e.preventDefault();
-    console.log(data)
     insertTransaction(data);
+    console.log(data);
     setData({
       description: "",
       type: "entrada",
-      value: 0,
+      value: "",
+      id: Math.random()
     });
   }
 
   return (
-    <form onSubmit={submit}>
-      <label name="description" id="label-description">
+    <form className={styles.formulary} onSubmit={submit}>
+      <label name="description" className ={styles.labelDescription}>
         Descrição
       </label>
       <input
@@ -32,22 +35,23 @@ const Form = ({insertTransaction}) => {
       />
       <p>Ex: Compra de roupas</p>
 
-      <div className="value-type-inputs">
-        <div className="input-div">
+      <div className={styles.valueTypeInputs}>
+        <div className={styles.inputDiv}>
           <label name="value">Valor</label>
           <input
             type="number"
-            id="number-input"
-            defaultValue={1}
+            className = {styles.numberInput}
+            placeholder="0"
+            value={data.value}
             onChange={(e) =>
               setData({ ...data, value: Number(e.target.value) })
             }
           />
         </div>
-        <div className="input-div">
+        <div className={styles.inputDiv}>
           <label name="type">Tipo de valor</label>
           <select
-            defaultValue={data.type}
+            value={data.type}
             onChange={(e) => setData({ ...data, type: e.target.value })}
           >
             <option value="entrada">Entrada</option>

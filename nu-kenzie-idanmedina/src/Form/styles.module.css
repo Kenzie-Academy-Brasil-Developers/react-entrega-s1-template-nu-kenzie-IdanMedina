@@ -1,0 +1,83 @@
+.formulary {
+    position: absolute;
+    font-family: "Inter", sans-serif;
+    left: 25vw;
+    margin-top: 5px;
+    width: 363px;
+    max-height: 351px;
+    padding: 38px 24.5px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff; /* grey-2 */
+    border: 1.5px solid #e9ecef;
+    border-radius: 4px;
+  }
+
+  .formulary p {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 0.3rem;
+    color: #868e96; /* grey-50 */
+  }
+
+  .formulary label {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #212529; /* grey-100 */
+    margin-bottom: 9px;
+  }
+  
+  .formulary input {
+    padding: 16px 16px;
+    gap: 10px;
+    background: #f8f9fa; /* grey-0 */
+    border: 2px solid #f8f9fa; /* grey-0 */
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: "Inter", sans-serif;
+    color: #868e96; /* grey-50 */
+  }
+  
+  select {
+    width: 150px;
+    height: 48px;
+    padding: 0px 16px;
+    gap: 10px;
+    background: #f8f9fa; /* grey-0 */
+    border: 2px solid #f8f9fa; /* grey-0 */
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    line-height: 26px;
+    color: #343a40; /* grey-3 */
+  }
+
+  .valueTypeInputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 19px;
+  }
+  .inputDiv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.1rem;
+  }
+
+ .labelDescription {
+    margin-bottom: 12px;
+  }
+
+ .numberInput {
+    width: 96px;
+    height: 16px;
+  }
