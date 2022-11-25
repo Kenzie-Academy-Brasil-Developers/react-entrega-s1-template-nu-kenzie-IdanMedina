@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import EmptyList from "../EmptyList";
+import "./styles.css";
 
 const List = ({ list, deleteTransaction, setFilterType }) => {
   return (

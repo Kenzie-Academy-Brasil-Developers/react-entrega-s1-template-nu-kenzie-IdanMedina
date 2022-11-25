@@ -1,0 +1,80 @@
+.login-body {
+  background: #000000;
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  color: white;
+  font-family: "Nunito", sans-serif;
+}
+#logo-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50vw;
+  gap: 1.8rem;
+  margin-left: 150px;
+  z-index: 1;
+}
+#logo-login img {
+  margin-top: 33vh;
+  object-fit: scale-down;
+}
+#logo-login h2 {
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 48px;
+}
+#logo-login p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+#start-btn {
+  width: 241px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 13px, 20px, 13px, 20px;
+  margin-top: 28px;
+  font-family: inherit;
+}
+#ellipse {
+  margin-top: 20vh;
+}
+
+#div-logo {
+  position: absolute;
+  left: 50vw;
+}
+@media (max-width: 1250px) {
+  #ellipse {
+    position: absolute;
+    object-fit: scale-down;
+    scale: 0.75;
+    left: -15vw;
+    opacity: 0.6;
+  }
+}
+@media (max-width: 820px) {
+  #ellipse {
+    scale: 0.67;
+    left: -33vw;
+  }
+}
+@media (max-height: 820px) {
+  #ellipse {
+    scale: 0.67;
+    left: -33vw;
+    top: -20vh;
+  }
+}
+@media (max-width: 600px) {
+  #ellipse {
+    scale: 0.4;
+    left: -66vw;
+  }
+  #logo-login {
+    margin-left: 10vw;
+  }
+}

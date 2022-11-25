@@ -1,5 +1,6 @@
 import React from "react";
 import ellipse1 from "../../assets/Group 262.png";
+import "./styles.css";
 
 const Login = ({ setStart }) => {
   return (

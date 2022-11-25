@@ -1,10 +1,11 @@
 import React from "react";
 import noCard from "../assets/NoCard.svg";
+import "./styles.css";
 
 const EmptyList = () => {
   return (
     <div>
-      <img src={noCard} />
+      <img id="no-card" src={noCard} />
     </div>
   );
 };
